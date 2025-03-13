@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.wrapper .card {
+  padding: 3rem;
+  background-color: hsl(31, 77%, 52%);
+}
+.wrapper .card__icon {
+  width: 4rem;
+  height: 2.5rem;
+  margin-bottom: 2.1875rem;
+}
+.wrapper .card__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  font-family: "Big Shoulders", sans-serif;
+}
+.wrapper .card__description {
+  padding-block: 1.5rem;
+  line-height: 1.65;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 100%);
+  font-family: "Lexend Deca", sans-serif;
+}
+.wrapper .card__button {
+  padding: 0.75rem 2rem;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+  cursor: pointer;
+  background-color: white;
+  transition: color 0.3s ease-in-out background-color 0.3s ease-in-out;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: hsl(31, 77%, 52%);
+  font-family: "Lexend Deca", sans-serif;
+}
+.wrapper .card__button:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: transparent;
+}
+.wrapper .card--suv {
+  background-color: hsl(184, 100%, 22%);
+}
+.wrapper .card--suv .card__button {
+  color: hsl(184, 100%, 22%);
+}
+.wrapper .card--suv .card__button:hover {
+  color: hsl(0, 0%, 100%);
+}
+.wrapper .card--luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+.wrapper .card--luxury .card__button {
+  color: hsl(179, 100%, 13%);
+}
+.wrapper .card--luxury .card__button:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 48rem) {
+  .wrapper {
+    flex-direction: row;
+    max-width: 57.5rem;
+  }
+  .wrapper .card__button {
+    margin-top: 3.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,82 @@
+@use 'variables' as *;
+
+@mixin text-style($size, $weight, $color, $font-family) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $font-family;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+
+    .card {
+        padding: $spacing-lg;
+        background-color: $bright-orange;
+
+        &__icon {
+            width: 4rem;
+            height: 2.5rem;
+            margin-bottom: $spacing-md;
+        }
+
+        &__title {
+            @include text-style($font-size-title, $font-weight-bold, $white, $font-family-BS);
+        }
+
+        &__description {
+            padding-block: $spacing-sm;
+            line-height: 1.65;
+            @include text-style($font-size-body, $font-weight-regular, $white, $font-family-lexend);
+        }
+
+        &__button {
+            padding: 0.75rem 2rem;
+            border: 2px solid $white;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            background-color: white;
+            transition: $color-transition $bg-color-transition;
+            @include text-style($font-size-body, $font-weight-regular, $bright-orange, $font-family-lexend);
+        }
+
+        &__button:hover {
+            color: $white;
+            background-color: transparent;
+        }
+
+        &--suv {
+            background-color: $dark-cyan;
+            .card__button {
+                color: $dark-cyan;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        &--luxury {
+            background-color: $very-dark-cyan;
+            .card__button {
+                color: $very-dark-cyan;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 48rem) {
+    .wrapper {
+        flex-direction: row;
+        max-width: 57.5rem;
+
+        .card__button {
+            margin-top: 3.5rem;
+        }
+    }
+}
